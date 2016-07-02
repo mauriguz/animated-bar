@@ -1,0 +1,95 @@
+body, html{
+	background-color: white;
+	margin: 0;
+}
+
+header{
+	margin-top: 2em;
+}
+
+.nav{
+	background-color: #0367B4;
+	text-align: center;
+}
+
+.nav ul{
+	padding: 0;
+	margin: 0;
+}
+
+.nav ul li{
+	display: inline-block;
+	margin: 0 1.2em;
+	box-shadow: 0 0 15px #000000;
+}
+
+.nav ul li a{
+	transition:all 1s ease;
+	z-index: 1;
+	font-family: sans-serif;
+}
+
+.nav ul li a:link{
+	position: relative;
+	padding: 1em 2em;
+	display: inline-block;
+	height: 100%;
+	color:white;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.nav ul li a:visited{
+	color:white;
+}
+
+.nav ul li a:hover{
+	color:white;
+}
+
+.nav ul li a:active{
+	transform: scale(1.3);
+	z-index: 100;
+}
+
+.flip{
+	perspective:200px;
+}
+
+.flip:hover .flip-container{
+	transform: rotateX(-90deg);
+}
+
+.flip-container{
+	position: absolute;
+	top:0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	transform-style: preserve-3d;
+  	transition: transform 0.7s;
+}
+
+.flip-container span{
+	display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 3em;
+}
+
+.flip-container span.front {
+  background-color: #2196F3;
+  transform: rotateX(0deg) translateZ(28px);
+  border: solid 2px #2196F3;
+}
+
+.flip-container span.back {
+  background-color: #2196F3;
+  transform: rotateX(90deg) translateZ(28px);
+  border: solid 2px #2196F3;
+}
